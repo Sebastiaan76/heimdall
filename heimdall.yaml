@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: heimdall
+  name: flaskapp
   namespace: default
 spec:
   replicas: 1
     spec:
       containers:
-      - image: linuxserver/heimdall
+      - image: sebbyflaskapp
         imagePullPolicy: Always
-        name: heimdall
+        name: flaskapp
         volumeMounts:
         - mountPath: /config
-          name: heimdall
+          name: flaskapp
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
-      - name: heimdall
+      - name: flaskapp
         persistentVolumeClaim:
           claimName: heimdall
