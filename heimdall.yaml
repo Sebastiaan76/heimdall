@@ -30,4 +30,4 @@ spec:
     spec:
       containers:
         - name: sebflask
-          image: sebbyflaskapp:v1
+          image: sebby/sebbyflaskapp:v1
