@@ -36,4 +36,4 @@ RUN \
 	/tmp/*
 
 # add local files
-COPY root/ /
+COPY . /
