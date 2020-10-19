@@ -1,0 +1,15 @@
+stages:
+- name: buildimage
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: sebheimdall
+  when:
+    event: {}
+- name: deploy
+  steps:
+  - applyYamlConfig:
+      path: ./heimdall.yaml
+timeout: 60
+notification: {}
