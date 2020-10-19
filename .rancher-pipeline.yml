@@ -1,0 +1,15 @@
+stages:
+- name: buildimage
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: sebbyflaskapp
+      pushRemote: true
+      registry: 127.0.0.1:34189
+- name: deploy
+  steps:
+  - applyYamlConfig:
+      path: ./heimdall.yaml
+timeout: 60
+notification: {}
