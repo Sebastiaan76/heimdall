@@ -5,8 +5,6 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: sebbyflaskapp
-      pushRemote: true
-      registry: 10.42.0.74:34189
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
