@@ -32,4 +32,4 @@ spec:
       - name: pipeline-docker-registry
       containers:
         - name: sebflask
-          image: sebby/sebbyflaskapp:v1
+          image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
