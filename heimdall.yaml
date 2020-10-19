@@ -28,6 +28,8 @@ spec:
       labels:
         deploy: example
     spec:
+      imagePullSecrets:
+      - name: pipeline-docker-registry
       containers:
         - name: sebflask
           image: sebby/sebbyflaskapp:v1
