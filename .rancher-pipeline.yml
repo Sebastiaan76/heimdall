@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: sebbyflaskapp:v1
+      tag: sebby/sebbyflaskapp:v1
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
