@@ -4,7 +4,6 @@ metadata:
   name: flaskapp
   namespace: default
 spec:
-  replicas: 1
     spec:
       containers:
       - image: sebbyflaskapp
