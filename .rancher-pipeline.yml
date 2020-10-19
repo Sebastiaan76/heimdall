@@ -5,7 +5,7 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: example/app:v1
-      pushRemote: true
+      pushRemote: false
       registry: 192.168.1.31:5000
 - name: deploy
   steps:
