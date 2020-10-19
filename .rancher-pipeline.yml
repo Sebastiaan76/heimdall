@@ -7,6 +7,10 @@ stages:
       tag: sebbyflaskapp
       pushRemote: true
       registry: 127.0.0.1:34189
+    env:
+      PLUGIN_DEBUG: "true"
+      PLUGIN_INSECURE: "true"  
+
 - name: deploy
   steps:
   - applyYamlConfig:
