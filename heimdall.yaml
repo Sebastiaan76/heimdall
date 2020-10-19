@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: heimdall
+  namespace: default
+spec:
+  replicas: 1
+    spec:
+      containers:
+      - image: linuxserver/heimdall
+        imagePullPolicy: Always
+        name: heimdall
+        volumeMounts:
+        - mountPath: /config
+          name: heimdall
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      volumes:
+      - name: heimdall
+        persistentVolumeClaim:
+          claimName: heimdall
